@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Plan</title>
+</head>
+<body>
+    <a href="/traveldashboard">Dashboard</a> | <a href="/logout">Logout</a>
+    <div class="add">        
+        <h2>Hello {{currentUser.first_name}} {{currentUser.last_name}}  Create a trip!</h2>        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action="/saveTrip/" method="POST">
+            {% csrf_token %}
+            <label for="destination">Destination: </label>
+            <input type="text" name="destination"><br>           
+            <label for="date_from">Start Date: </label>
+            <input type="date" name="date_from"><br>
+            <label for="date_to">End Date: </label>
+            <input type="date" name="date_to">
+            <label for="description">Plan: </label>
+            <input type="text" name="plan"><br>
+            <input type="hidden" name="userid" value="{{request.session.userid}}">
+            <!--<input type="button" value="Cancel" formaction ="/traveldashboard/">-->
+            <input type="submit" value="Submit">
+        </form>     
+    </div>
+    <div class="Cancel">
+            <form action="/traveldashboard/" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Cancel">
+            </form>
+    </div>
+</body>
+</html>

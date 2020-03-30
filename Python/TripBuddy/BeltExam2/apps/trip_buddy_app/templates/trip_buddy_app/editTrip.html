@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Plan</title>
+</head>
+<body>
+    <a href="/traveldashboard/">Home</a> | <a href="/logout">Logout</a>
+    <div class="add">
+        <h2>Hello {{currentUser.first_name}} {{currentUser.last_name}}  Edit a trip!</h2>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action="/updateTrip/{{trip.id}}" method="POST">
+            {% csrf_token %}
+            <label for="destination">Destination: </label>
+            <input type="text" name="destination" value={{trip.destination}} ><br>           
+            <label for="date_from">Start Date: </label>
+            <input type="date" name="date_from" value={{trip.start_date}} ><br>
+            <label for="date_to">End Date: </label>
+            <input type="date" name="date_to"  value={{trip.end_date}}  ><br>
+            <label for="description">Plan: </label>
+            <textarea name='plan' cols="40" rows="20"> {{trip.plan}} </textarea>
+            <!--<textarea  type="text" name="plan" value={{trip.plan}} cols="40" rows="20"></textarea>-->
+            <input type="hidden" name="userid" value="{{request.session.userid}}">
+            <!--<input type="submit" value="Cancel">-->
+            <input type="submit" value="Submit">
+        </form>    
+    </div>
+    <div class="Cancel">
+            <form action="/traveldashboard/" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Cancel">
+            </form>
+    </div>
+</body>
+</html>

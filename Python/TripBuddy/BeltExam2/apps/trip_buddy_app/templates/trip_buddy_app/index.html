@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trip Buddy</title>
+    {% load static %}   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="{% static 'login/js/main.js' %}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages%}
+            <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        <h1> Welcome! Let's travel!</h1>
+        <div class="reg">
+            <h1>Register</h1>
+            <form action="register/" method="post" id="reg-form">
+                {% csrf_token %}
+                <p>First Name</p>
+                <input type="text" name="fname" id="fname">
+                <p>Last Name</p>
+                <input type="text" name="lname" id="lname">
+                <p>Email</p>
+                <div id="email-msg"></div>
+                <input type="text" name="email" id="email-reg">
+                <p>Password</p>
+                <input type="password" name="pw" id="pw_reg">
+                <p>Confirm PW</p>
+                <input type="password" name="conf_pw" id="conf_pw">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="login/" method="post">
+            {% csrf_token %}
+            <p>Email</p>
+            <input type="text" name="email" id="email_login">
+            <p>Password</p>
+            <input type="password" name="pw" id="pw_login">
+            <input type="submit" value="Log In">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
