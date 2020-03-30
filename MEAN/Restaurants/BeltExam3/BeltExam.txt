@@ -1,0 +1,136 @@
+Gayathris-MacBook-Pro:Angular Gayathri$ cd BeltExam/
+Gayathris-MacBook-Pro:BeltExam Gayathri$ npm init -y 
+Wrote to /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/package.json:
+
+{
+  "name": "BeltExam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+Gayathris-MacBook-Pro:BeltExam Gayathri$ npm install mongoose express ejs body-parser express-flash express-session --save 
+
+> ejs@2.7.4 postinstall /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/node_modules/ejs
+> node ./postinstall.js
+
+Thank you for installing EJS: built with the Jake JavaScript build tool (https://jakejs.com/)
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN BeltExam@1.0.0 No description
+npm WARN BeltExam@1.0.0 No repository field.
+
++ express@4.17.1
++ body-parser@1.19.0
++ express-session@1.17.0
++ ejs@2.7.4
++ express-flash@0.0.2
++ mongoose@5.7.12
+added 78 packages from 49 contributors and audited 198 packages in 9.763s
+found 0 vulnerabilities
+
+
+
+   ╭────────────────────────────────────────────────────────────────╮
+   │                                                                │
+   │      New minor version of npm available! 6.12.0 → 6.13.1       │
+   │   Changelog: https://github.com/npm/cli/releases/tag/v6.13.1   │
+   │               Run npm install -g npm to update!                │
+   │                                                                │
+   ╰────────────────────────────────────────────────────────────────╯
+
+Gayathris-MacBook-Pro:BeltExam Gayathri$ ng new public 
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE public/README.md (1024 bytes)
+CREATE public/.editorconfig (246 bytes)
+CREATE public/.gitignore (631 bytes)
+CREATE public/angular.json (3593 bytes)
+CREATE public/package.json (1292 bytes)
+CREATE public/tsconfig.json (543 bytes)
+CREATE public/tslint.json (1953 bytes)
+CREATE public/browserslist (429 bytes)
+CREATE public/karma.conf.js (1018 bytes)
+CREATE public/tsconfig.app.json (270 bytes)
+CREATE public/tsconfig.spec.json (270 bytes)
+CREATE public/src/favicon.ico (948 bytes)
+CREATE public/src/index.html (292 bytes)
+CREATE public/src/main.ts (372 bytes)
+CREATE public/src/polyfills.ts (2838 bytes)
+CREATE public/src/styles.css (80 bytes)
+CREATE public/src/test.ts (642 bytes)
+CREATE public/src/assets/.gitkeep (0 bytes)
+CREATE public/src/environments/environment.prod.ts (51 bytes)
+CREATE public/src/environments/environment.ts (662 bytes)
+CREATE public/src/app/app-routing.module.ts (246 bytes)
+CREATE public/src/app/app.module.ts (393 bytes)
+CREATE public/src/app/app.component.css (0 bytes)
+CREATE public/src/app/app.component.html (25530 bytes)
+CREATE public/src/app/app.component.spec.ts (1098 bytes)
+CREATE public/src/app/app.component.ts (210 bytes)
+CREATE public/e2e/protractor.conf.js (808 bytes)
+CREATE public/e2e/tsconfig.json (214 bytes)
+CREATE public/e2e/src/app.e2e-spec.ts (639 bytes)
+CREATE public/e2e/src/app.po.ts (262 bytes)
+
+> fsevents@1.2.9 install /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/@angular/compiler-cli/node_modules/fsevents
+> node install
+
+node-pre-gyp WARN Using request for node-pre-gyp https download 
+[fsevents] Success: "/Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/@angular/compiler-cli/node_modules/fsevents/lib/binding/Release/node-v72-darwin-x64/fse.node" is installed via remote
+
+> fsevents@1.2.9 install /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/karma/node_modules/fsevents
+> node install
+
+node-pre-gyp WARN Using request for node-pre-gyp https download 
+[fsevents] Success: "/Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/karma/node_modules/fsevents/lib/binding/Release/node-v72-darwin-x64/fse.node" is installed via remote
+
+> fsevents@1.2.9 install /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/watchpack/node_modules/fsevents
+> node install
+
+node-pre-gyp WARN Using request for node-pre-gyp https download 
+[fsevents] Success: "/Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/watchpack/node_modules/fsevents/lib/binding/Release/node-v72-darwin-x64/fse.node" is installed via remote
+
+> fsevents@1.2.9 install /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/webpack-dev-server/node_modules/fsevents
+> node install
+
+node-pre-gyp WARN Using request for node-pre-gyp https download 
+[fsevents] Success: "/Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/webpack-dev-server/node_modules/fsevents/lib/binding/Release/node-v72-darwin-x64/fse.node" is installed via remote
+
+> core-js@2.6.10 postinstall /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/babel-runtime/node_modules/core-js
+> node postinstall || echo "ignore"
+
+
+> core-js@3.2.1 postinstall /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/core-js
+> node scripts/postinstall || echo "ignore"
+
+
+> core-js@2.6.10 postinstall /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/karma/node_modules/core-js
+> node postinstall || echo "ignore"
+
+
+> @angular/cli@8.3.19 postinstall /Users/Gayathri/Documents/Coding Dojo/Mean/Angular/BeltExam/public/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+added 1461 packages from 1071 contributors and audited 18872 packages in 179.741s
+found 0 vulnerabilities
+
+    Successfully initialized git.
+Gayathris-MacBook-Pro:BeltExam Gayathri$ cd public 
+Gayathris-MacBook-Pro:public Gayathri$ ng g s http
+CREATE src/app/http.service.spec.ts (323 bytes)
+CREATE src/app/http.service.ts (133 bytes)
+Gayathris-MacBook-Pro:public Gayathri$ 
+
+
+nodemon server.js on one terminal (bash)
+ng build --watch(node)
+sudo mongod on external terminal 
